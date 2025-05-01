@@ -1,4 +1,4 @@
-package com.programs.arrays;
+package com.programs.strings;
 
 import java.util.Scanner;
 
@@ -19,7 +19,7 @@ public class StringReduction {
         while (canReduce) {
             canReduce = false;
             StringBuilder sb = new StringBuilder();
-
+            
             int i = 0;
             while (i < str.length()) {
                 if (i < str.length() - 1 && str.charAt(i) != str.charAt(i + 1)) {

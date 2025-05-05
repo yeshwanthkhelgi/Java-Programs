@@ -1,4 +1,4 @@
-package com.programs.strings;
+package com.programs.arrays;
 
 public class LongestSubArray {
 

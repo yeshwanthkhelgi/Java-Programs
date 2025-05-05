@@ -16,7 +16,7 @@ public class LeftRotateDPlaces {
 //		int[] temp = new int[d];
 		int n = arr.length;
 		d = d % n;
-//		d = n - d; // right rotation case
+		d = n - d; // right rotation case
 //		for(int i=0;i<d;i++) {
 //			temp[i] = arr[i];
 //		}

@@ -8,7 +8,7 @@ public class IntersectionOfTwoSortedArrays {
 		// TODO Auto-generated method stub
 		int[] arr1 = {1,2,2,3,3,4,5,6,7};
 		int[] arr2 = {2,3,3,5,6,6,7};
-		intersectionOfTwoSortedArraysBruteForce(arr1,arr2);
+//		intersectionOfTwoSortedArraysBruteForce(arr1,arr2);
 		intersectionOfTwoSortedArraysOptimal(arr1, arr2);
 
 	}

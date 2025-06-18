@@ -8,15 +8,15 @@ public class LinkedList {
 	public void add(int data) {
 		Node newNode = new Node(data);
 		
-		Node current = head;
+		Node mover = head;
 		if(head == null) {
 			head = newNode;
 		}
 		else {
-			while(current.next!=null) {
-				current = current.next;
+			while(mover.next!=null) {
+				mover = mover.next;
 			}
-			current.next = newNode;
+			mover.next = newNode;
 		}
 //		System.out.println(head);
 		
@@ -26,10 +26,10 @@ public class LinkedList {
 	public void printValues() {
 		// TODO Auto-generated method stub
 		
-		Node current = head;
-		while(current != null) {
-			System.out.print(current.data + " ");
-			current = current.next;
+		Node mover = head;
+		while(mover != null) {
+			System.out.print(mover.data + " ");
+			mover = mover.next;
 		}
 		System.out.println();
 		
@@ -49,16 +49,55 @@ public class LinkedList {
 
 	public void delete(int data) {
 		// TODO Auto-generated method stub
-		Node current = head;
-		while(current.next != null && current.next.data != data) {
-			current = current.next;
+		if (head == null) return; // empty list
+
+	    if (head.data == data) {
+	        head = head.next; // delete head
+	        return;
+	    }
+		Node mover = head;
+		while(mover.next != null && mover.next.data != data) {
+			mover = mover.next;
 		}
 		
-		if(current.next != null) {
+		if(mover.next != null) {
 			
-			current.next = current.next.next;
+			mover.next = mover.next.next;
 			
 		}
+	}
+	
+	
+
+
+	public void length() {
+		// TODO Auto-generated method stub
+		Node mover = head;
+		int count = 0;
+		while(mover != null) {
+			mover = mover.next;
+			count++;
+		}
+		System.out.println(count);
+		
+	}
+
+
+	public void checkIfPresent(int val) {
+		// TODO Auto-generated method stub
+		Node mover = head;
+		int index = 0;
+		while(mover != null) {
+			index++;
+			if(mover.data == val) {
+				System.out.println("present at " + (index - 1));
+				return;
+			}
+			mover = mover.next;
+			
+		}
+		System.out.println("not present");
+		
 	}
 	
 }

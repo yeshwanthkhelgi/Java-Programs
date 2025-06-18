@@ -13,8 +13,9 @@ public class Main {
 		list.addElementAtStart(7);
 		
 		list.delete(10);
-		
+		list.checkIfPresent(8);
 		list.printValues();
+		list.length();
 
 	}
 

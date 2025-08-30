@@ -32,14 +32,16 @@ public class ReverseLinkedList {
 		// TODO Auto-generated method stub
 		ListNode temp = head;
 		ListNode prev = null;
+		ListNode front = null;;
 		while(temp != null) {
-			ListNode front = temp.next;
+			front = temp.next;
 			temp.next = prev;
 			prev = temp;
 			temp = front;
 		}
 		return prev;
-	}
+		
+		}
 
 	private static void printLL(ListNode head) {
 		// TODO Auto-generated method stub

@@ -21,6 +21,7 @@ public class ReentrantExample {
 			innerMethod();
 		}
 		finally {
+			System.out.println("Outer method lock is released");
 			lock.unlock();
 		}
 	}
@@ -31,6 +32,7 @@ public class ReentrantExample {
 			System.out.println("Inner method");
 		}
 		finally {
+			System.out.println("Inner method lock is released");
 			lock.unlock();
 		}
 	}

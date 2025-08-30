@@ -31,7 +31,8 @@ public class SubArrayMaxSum {
 				sum = 0;
 			}
 		}
-		Arrays.stream(arr,start,end).forEach(n1 -> System.out.print(n1 + " "));
+		System.out.println(start + " " + end);
+//		Arrays.stream(arr,start,end).forEach(n1 -> System.out.print(n1 + " "));
 		return maxSum;
 		
 		
